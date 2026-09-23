@@ -27,7 +27,7 @@ jobs:
           pip install --upgrade pip setuptools
           pip install "cython<3.0.0" buildozer kivy
 
-      - name: Build APK
+      - name: Build APK with Buildozer
         run: |
           buildozer -v android debug
 
