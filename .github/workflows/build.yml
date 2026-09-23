@@ -24,12 +24,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential libffi-dev libssl-dev ccache git zip unzip zlib1g-dev openjdk-17-jdk autoconf libtool pkg-config
-          pip install --upgrade pip
-          pip install "cython<3.0.0" buildozer kivy
+          pip install --upgrade pip setuptools
+          pip install "cython==0.29.33" buildozer kivy
 
       - name: Build APK with Buildozer
         run: |
-          buildozer -v android debug
+          yes | buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
