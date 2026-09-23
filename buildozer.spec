@@ -1,4 +1,3 @@
-
 [app]
 title = Attendance App
 package.name = attendanceapp
@@ -11,7 +10,7 @@ requirements = python3,kivy
 orientation = portrait
 fullscreen = 0
 
-android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
+android.permissions = INTERNET
 android.api = 31
 android.minapi = 21
 android.ndk = 23b
