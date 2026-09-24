@@ -19,7 +19,11 @@ jobs:
 
       - name: Build APK with Buildozer
         run: |
-          yes | buildozer --warn_on_root=0 -v android debug
+          # पुरानी कैश फ़ाइलों को साफ़ करना
+          rm -rf .buildozer
+          
+          # बिल्ड कमांड
+          yes | buildozer --warn_on_root=0 -v android debug --android.archs=arm64-v8a
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
