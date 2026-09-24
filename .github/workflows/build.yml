@@ -19,7 +19,7 @@ jobs:
 
       - name: Build APK with Buildozer
         run: |
-          rm -rf .buildozer/android/platform/build-arm64-v8a
+          rm -rf .buildozer
           yes | buildozer --warn_on_root=0 -v android debug
 
       - name: Upload APK
