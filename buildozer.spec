@@ -17,6 +17,8 @@ fullscreen = 0
 android.permissions = INTERNET
 android.accept_sdk_license = True
 android.archs = arm64-v8a
+android.api = 33
+android.minapi = 21
 
 [buildozer]
 
